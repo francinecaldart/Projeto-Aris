@@ -39,15 +39,7 @@ cloudpickle
 clyent==1.2.1
 colorama
 comtypes==1.1.9
-conda==4.10.1
-conda-build==3.21.4
-conda-content-trust 
-conda-package-handling 
-conda-repo-cli 
-conda-token 
-conda-verify==3.4.2
-contextlib2==0.6.0.post1
-cryptography 
+conda==4.3.16
 cycler==0.10.0
 Cython 
 cytoolz==0.11.0
@@ -97,7 +89,6 @@ ipython
 ipython-genutils
 ipywidgets 
 isort 
-itsdangerous 
 jdcal==1.4.1
 jedi
 Jinja2 
@@ -107,8 +98,6 @@ jsonschema
 keras==2.6.0
 Keras-Preprocessing==1.1.2
 keyring 
-kiwisolver 
-lazy-object-proxy 
 libarchive-c 
 llvmlite==0.36.0
 locket==0.2.1
@@ -165,11 +154,8 @@ Pillow
 pkginfo==1.7.0
 pluggy 
 ply==3.11
-prometheus-client 
 prompt-toolkit 
 protobuf==3.18.0
-psutil
-ptyprocess
 py
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
@@ -276,9 +262,6 @@ win-inet-pton
 win-unicode-console==0.5
 wincertstore==0.2
 wrapt==1.12.1
-xlrd 
-XlsxWriter 
-xlwings==0.23.0
 xlwt==1.3.0
 xmltodict==0.12.0
 yapf
