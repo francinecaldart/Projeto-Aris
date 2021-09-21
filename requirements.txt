@@ -74,7 +74,6 @@ google-auth-oauthlib==0.4.6
 greenlet 
 grpcio==1.40.0
 gunicorn==20.1.0
-h5py==2.10.0
 HeapDict==1.0.1
 html5lib 
 idna==3.2
@@ -98,7 +97,6 @@ jsonschema
 keras==2.6.0
 Keras-Preprocessing==1.1.2
 keyring 
-libarchive-c 
 llvmlite==0.36.0
 locket==0.2.1
 lxml
