@@ -1,0 +1,159 @@
+<br xmlns="http://www.w3.org/1999/html">
+
+<div class="text" align="center">
+    <h3>Situação das NCs</h3>
+</div>
+
+<div class="container">
+<div class="row ">
+
+    <div class="col-4 ">
+    <div class="card text-center" id="total-TN" style="width: 20 rem;">
+         <div class="card-body">
+            <h5 class="card-title">{{total_TN}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Total de Não Conformidades</h6>
+             <p class="card-text"></p>
+         </div>
+      </div>
+     </div>
+
+     <div class="col-4 ">
+    <div class="card text-center " style="width: 20 rem;">
+          <div class="card-body">
+            <h5 class="card-title">{{total_atendidas}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Total de Não Conformidades Atendidas</h6>
+            <p class="card-text"></p>
+          </div>
+    </div>
+    </div>
+
+    <div class="col-4 ">
+    <div class="card text-center" style="width: 20 rem;">
+      <div class="card-body ">
+        <h5 class="card-title">{{total_nao_atendidas}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Total de Não Conformidades Não Atendidas</h6>
+        <p class="card-text"></p>
+      </div>
+        </div>
+    </div>
+
+
+<div class="col-4 ">
+
+
+         <canvas id="myChart" width=  "3" height="3"></canvas>
+        <script>
+                var ctx = document.getElementById('myChart').getContext('2d');
+                var myChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Não Atendidas','Atendidas'],
+                        datasets: [{
+                            label: 'Número de Não Conformidades',
+                            data: [{{total_nao_atendidas}},{{total_atendidas}}],
+                            backgroundColor: [
+                                'rgba(280, 99, 132, 0.2)',
+                                'rgba(54, 162, 235, 0.2)',
+                                'rgba(255, 206, 86, 0.2)',
+                                'rgba(75, 192, 192, 0.2)',
+                                'rgba(153, 102, 255, 0.2)',
+                                'rgba(255, 159, 64, 0.2)'
+                            ],
+                            borderColor: [
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)',
+                                'rgba(255, 159, 64, 1)'
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+
+                            }
+                        }
+                    }
+                });
+        </script>
+ </div>
+
+
+            <div class=" col-5 offset-md-1">
+                <div class="text" align="center">
+                    <h3>Mapa das NCs</h3>
+                </div>
+                {{ map1|safe }}
+            </div>
+
+
+
+</div>
+</div>
+
+
+
+
+       </h2>
+ <canvas id="myChart" width=  "50" height="50"></canvas>
+
+
+
+
+<div class="row justify-content-md-center">
+    <div class = 'col-md-14'>
+        <div class="card card-body" border="1">
+            <form method="get">
+                {{myFilter.form}}
+                <button class="btn btn-primary" type="submit">Search</button>
+            </form>
+        </div>
+        </div>
+
+</div>
+
+
+<div class="row justify-content-md-center">
+
+<div class="col-md-7">
+    <h5> TABELA DE NÃO CONFOMIRDADES</h5>
+    <hr>
+    <a class="btn btn-primary  btn-sm btn-block" href="{% url 'create_NC' %}">Criar NC</a>
+        <table class="table table-sm"  border="1" align="center">
+            <tr>
+                <th>Município</th>
+                <th>TN</th>
+                <th>Descrição</th>
+                <th>Prazo</th>
+                <th>Situação</th>
+                <th>OBS</th>
+
+            </tr>
+            {% for i in item%}
+            <tr>
+                <td>{{i.Municipio}}</td>
+                <td>{{i.TN}}</td>
+                <td>{{i.Descricao}}</td>
+                <td>{{i.Prazo}}</td>
+                <td>{{i.Situacao}}</td>
+                <td>{{i.OBS}}</td>
+
+
+            </tr>
+
+
+
+            {% endfor %}
+            </tr>
+
+
+        </table>
+    </div>
+    </div>
+</div>
+</div>
+
+
