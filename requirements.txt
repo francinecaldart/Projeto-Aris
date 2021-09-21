@@ -164,7 +164,7 @@ pylint
 pyls-black 
 pyls-spyder 
 PyNaCl 
-pyodbc===4.0.0-unsupported
+pyodbc===4.0.1
 pyOpenSSL 
 pyparsing 
 pyreadline==2.1
