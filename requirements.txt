@@ -108,7 +108,6 @@ MarkupSafe==1.1.1
 matplotlib 
 mccabe==0.6.1
 mistune==0.8.4
-mkl-service==2.3.0
 mpmath==1.2.1
 msgpack 
 multipledispatch==0.6.0
