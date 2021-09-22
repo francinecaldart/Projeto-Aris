@@ -18,3 +18,5 @@ python-dateutil==2.8.2
 spyder 
 whitenoise==5.3.0
 win-unicode-console==0.5
+google-auth==1.35.0
+google-auth-oauthlib==0.4.6
